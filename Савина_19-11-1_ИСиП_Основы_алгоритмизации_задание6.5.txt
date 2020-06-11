@@ -1,0 +1,29 @@
+using System;
+using System.Collections;
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList list = new ArrayList(new int[] { -1, 4, 12, 49, -69, -90, 22, -5, 3, -2 });
+            for(int i = 5; i < 10; i++)
+            {
+                list.Insert(i, 0);
+            }
+            Console.WriteLine("¹1");
+            foreach (object i in list)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("\n¹2");
+            list.RemoveAt(0);
+            int k = list.Count-1;
+            list.RemoveAt(k);
+            for(int i = 0; i < list.Count; i++)
+            {
+                Console.WriteLine(list[i]);
+            }
+        }
+    }
+}
